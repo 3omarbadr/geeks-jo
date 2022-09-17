@@ -18,8 +18,8 @@ class CountryFactory extends Factory
     {
 
         return [
-            'name' => $this->faker->country(),
-            'code' => $this->faker->countryCode()
+            'name' => $this->faker->unique()->country(),
+            'code' => $this->faker->unique()->countryCode()
         ];
     }
 }

@@ -20,7 +20,8 @@ class CityFactory extends Factory
     {
         return [
             'name' => $this->faker->city(),
-            'country_id' => Country::factory()
+            'country_id' => Country::pluck('id')->random()
+            
         ];
     }
 }

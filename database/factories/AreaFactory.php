@@ -20,7 +20,7 @@ class AreaFactory extends Factory
     {
         return [
             'name'=> $this->faker->address(),
-            'city_id' => City::factory()
+            'city_id' => City::pluck('id')->random()
         ];
     }
 }
