@@ -11,6 +11,11 @@ class City extends Model
 
     protected $fillable = ['name', 'country_id'];
 
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d',
+        'updated_at' => 'datetime:Y-m-d'
+    ];
+
     public function country()
     {
         return $this->belongsTo(Country::class);

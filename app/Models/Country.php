@@ -11,6 +11,11 @@ class Country extends Model
 
     protected $fillable = ['name', 'code'];
 
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d',
+        'updated_at' => 'datetime:Y-m-d'
+    ];
+
     public function cities()
     {
         $this->hasMany(City::class);

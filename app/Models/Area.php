@@ -11,6 +11,11 @@ class Area extends Model
 
     protected $fillable = ['name', 'city_id'];
 
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d',
+        'updated_at' => 'datetime:Y-m-d'
+    ];
+
     public function city()
     {
         return $this->belongsTo(City::class);
