@@ -4,6 +4,8 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
@@ -17,6 +19,10 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        Schema::disableForeignKeyConstraints();
+        DB::table('countries')->truncate();
+        Schema::enableForeignKeyConstraints();
+
         return [
             'name' => fake()->name(),
             'email' => fake()->safeEmail(),
