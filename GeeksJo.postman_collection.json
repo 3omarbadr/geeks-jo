@@ -1,0 +1,840 @@
+{
+	"info": {
+		"_postman_id": "9f26bb27-bca1-475e-be6e-e09d87be87eb",
+		"name": "GeeksJo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16204995"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin1@geeks.io",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin1@geeks.io",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "omar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Countries",
+			"item": [
+				{
+					"name": "getCountries",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOGQxNzFmNTgyZGZlYjg0NjRmZTc2NmM0ZDNhZTVlOWYxNzE2YmUzMmM0ZWYzYWJlZjc3ZDg4MGVjYzQ5MWUzZjE0ZDQ0OWJkNzI2NzdmZGEiLCJpYXQiOjE2NjM0NTk2NjMuNjQ1MDM3LCJuYmYiOjE2NjM0NTk2NjMuNjQ1MDQzLCJleHAiOjE2OTQ5OTU2NjMuNjM3NjY5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.LYjhKVnlMYFSkwhUDELeSKtOCCsWfTnfNkWufuRCUNsAasoF1znwmZu3IGGO2uK6vRQC1qSOjLRbqwqx7YKxxpUDKstGevYIO-f_r9gx-HO7-_CgPwsUShLqd43cS_ojuZy0u-TQOoVsx9Fnu_VBEa-FaqOKT9H8D4KCOegXNudNFPWtODdMu7fipQQV9c6xC-SeWXTJ2KeOSK4K5ZriSnlkPCineeP5SbN0JAwYNl6gYRDk38F2dfDGbIFnSsr4F7OqWCYVnptutZxzQBTOPUzHYMoQhyTUXah-gWxMg1UKlNV_XuPv7rVS8qf5D43Pva4oQfzE8slkGQmROqhUMDWAHkLfz8pfIDvkArlx1iFe7UZ8auzXyvJZxZxYLHP7yJhd8zC0bxFjhTOAHYST7z9oeZMwvR4rj2fqBCNLGlfXBBnF1EURf10ceZ_R-3LfELamm223_UKgUQyEeM0UuZ4jg5JthYH6ZZcVpIuvqK-NhuEUrhFLASFdU9bA5EAFECFIQVC4enIZuBb96KPSkhZ4miL5X7lO4t5ni3_NEVB04IhfS13sEAXLQ-tTjdLibiE29Xs1eQeCJNddK4M7idmo-iIY8HBWGa2BIvESoRiX66bu0tcXCIzkt9HGzu0phE40gXLq41vGvje7ZlA_d5Vziol6OSizBf1aTAncLRM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/countries",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showCountry",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/countries/11",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"countries",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StoreCountry",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "omarr",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "OMb",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/countries",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"countries"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCountry",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Egypt",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "EG",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/countries/5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"countries",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCountry",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Egypt\",\n    \"code\" : \"EG\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/countries/6",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"countries",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cities",
+			"item": [
+				{
+					"name": "getCities",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cities",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showCity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cities/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StoreCity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "omar",
+									"type": "text"
+								},
+								{
+									"key": "country_id",
+									"value": "11",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cities",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Egypt",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "EG",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cities/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cities",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"omar\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/cities/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"cities",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Areas",
+			"item": [
+				{
+					"name": "getAreas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/areas",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"areas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showArea",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/areas/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"areas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "StoreArea",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Area",
+									"type": "text"
+								},
+								{
+									"key": "city_id",
+									"value": "4",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/areas",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"areas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteArea",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Egypt",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "EG",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/areas/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"areas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateArea",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGE3MTY5M2UyMzhhOTRhNzk3Y2E5ZmU5YjAxMzZiZDg5MmRhNmU5MjgwNDM0NzY0ZGMzNzJiMjFhYzI3YTA1ZjNjYWI0MTBhNTljODA0ODkiLCJpYXQiOjE2NjM0NDAyODUuNjA1NzcxLCJuYmYiOjE2NjM0NDAyODUuNjA1NzgsImV4cCI6MTY5NDk3NjI4NS41OTgxOSwic3ViIjoiMiIsInNjb3BlcyI6W119.Mxie3dd1mHANMeNKuVL-9iBknjnC0Zpcl0YXdI65iDoljvG5s4hX6NtGbJyl054vSSDsp8eBVozB9g-wdGlaVXunCEk8f5sPNbNrYj3TdsGvzHT8v9bhajbXkGznAVG9oWwmUaY8nCAX6zE3L2es-6g7DpWBX7fd_t5nOWP_hLFMorsh-6bC1clr9PPs3zf3nyFObbsZIc5mCEQuodfQCPhjXdi-iSpctepPBDBeVlQqFcp3hd3kNjRQeQpdlEK3HU4yko9_l3IHMhZR0TpRRvRFevDxs_UZxjD3qWKgQQOVT0WGKtIPj6Nr15WjUS4g33t5gyxpggSDpMdZ2_I_9tW9SkR-Z8ky9MXIY6I69tceqxXgx2SD6K1SYvkm8M_To1s4R_7lyPQMIvLIXkL12PCcp7uPiP-yXk7HGp7GZT80dZBZePpieSflXSgu-H49_ElHCc8T95u7VNIADglPvE4KoefluT3OIzuexWajMROyCzW62ItmFa_Pr0jS2qs-8cLWFkvkoA7Gxo37s6kXxo18nOT1rJNyweULD1LcKYfl4XaUZWP_h1ykrq192H_3WhAhcAn3-maqOXHaXmPrZO_8kI5j3Ace0RhyIww6hRs1qBoKQ28_XpyBVYhoBIEuc95qtWqlqTMl3MkgyLJJZjweLth34ceYzPChigfanV0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"area\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/areas/202",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"areas",
+								"202"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
